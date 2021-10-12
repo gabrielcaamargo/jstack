@@ -9,7 +9,7 @@ const user = {
 
 
 //Spread (espalhar) operator
-
+//O spread operator tem a mesma sintaxe que o rest operator, mas sua função é bem diferente. O spread, faz com que tragamos todas as propriedades de um objeto, para um objeto novo, sem alterar as propriedades do objeto antigo.
 const updatedUser = {
   ...user,
   skills: [...user.skills, 'Marketing'],
