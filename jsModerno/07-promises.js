@@ -9,18 +9,26 @@ const apiCall = new Promise((resolve, reject)=>{
 // apiCall
 // .then((mensagemSucesso)=>{
 //   console.log(mensagemSucesso)
+//   console.log('Depois da promise')
 // })
 // .catch((mensagemErro)=>{
 //   console.log(mensagemErro)
 // })
 
-async function run(){
-  const resposta = await apiCall
-  console.log(resposta)
-}
 
+
+async function run(){
+  try{
+    const resposta = await apiCall
+    console.log(resposta)
+    console.log('Depois da promise')
+  }
+ catch(erro) {
+    console.log(erro)
+  }
+}
 run()
-  //Uma promise é quando se tem uma tarefa muito demorada, que quando for finalizada, queremos usar sua resposta
+//   //Uma promise é quando se tem uma tarefa muito demorada, que quando for finalizada, queremos usar sua resposta
 
   //O then é um método, e recebe uma callback function como seu único parâmetro, onde trata os dados em caso de sucesso da promise. Para pegarmos só o conteúdo da promise, passamos parâmetros na callback function, e recebemos esses parâmetros no corpo dessa função.
 
