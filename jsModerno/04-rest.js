@@ -7,8 +7,9 @@ const user = {
   skills: [ 'Back-end', 'Front-end', 'Mobile', 'UI/UX'],
 };
 
-const {firstName, skills, ...resto } = user
 
-const [primary] = skills
+//Rest operator
+const { firstName, skills, ...resto } = user;
+const [ primary, ...restoSkills ] = skills
 
-console.log( resto )
+console.log(restoSkills)
