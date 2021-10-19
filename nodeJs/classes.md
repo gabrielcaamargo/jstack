@@ -1,4 +1,4 @@
-#Aula 1
+# Aula 1
 
 ### Call Stack
  - Pilha de processamento do código
@@ -12,7 +12,7 @@
  - Traz 2 componentes importantíssimos pro Node, que permite que executemos mais de 1 coisa por vez, são eles: ***Thread Pool*** e ***Event Loop***
  
  - Exemplo:
-ˋˋˋ
+~~~
  console.log('Antes');
 
  db.query(query, function callback(err, data){
@@ -27,4 +27,4 @@ Então o node pega a execução da query, e joga pra dentro do Thred Pool, e lá
 
 Quando a query terminar sua execução, o node tira ela do Thread Pool, e joga pra dentro da 
 ***Callback Queue***, e seguindo o código acima, o que vai pra essa callback queue, é a função callback, e é executado lá mesmo. O node "pergunta" constantemente para a callback queue, para saber se a função de lá já terminou de executar, para pegar os dados. Entre a callback queue e a call stack, temos o ***Event Loop***, quando a callback queue responder que tem uma função liberada, a callback queue verifica se a call stack tá liberada, e se estiver, a call stack puxa pra dentro de si, a função. E assim o node executa código assíncrono.
-ˋˋˋ
+~~~
