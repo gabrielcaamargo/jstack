@@ -206,3 +206,7 @@ Exemplo:
         console.log(funcaoTeste)
       ```
   - E para importar os módulos nativos do node: require('nomeDoModulo'). Sem a barra pra acessar o caminho, apenas o nome do módulo.
+
+# Aula 4
+
+  ## Conteúdo da aula comentado na pasta firstApi
