@@ -52,7 +52,9 @@ Quando a query terminar sua execução, o node tira ela do Thread Pool, e joga p
  #### Indo mais a fundo em HTTP:
 
 Exemplo:
+  
   https://mywebsite.com/products?page=3&orderBy=name
+
 ***Request***
 - Do Https:// até o .com, isso é a nossa URL
 - /products -> endpoint -> onde identificamos o recurso que estamos tentando adicionar
