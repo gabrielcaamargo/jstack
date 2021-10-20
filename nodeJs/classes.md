@@ -157,3 +157,52 @@ Exemplo:
   **Representação de estado**
     - Retorna uma representação de dados em JSON, ao invés do HTML. 
     - Os dados ficam acessíveis de uma forma genérica. Basta que tenhamos uma linguagem que faça uma requisição HTTP pra conseguir chegar no servidor. E depois interpretar o código JSON pra montar a interface de acordo com a plataforma onde ela tá rodando.
+
+# Aula 3
+
+## Módulos
+- Conjunto de código que podemos ou não reutilizar.
+  - 3 tipos de módulos:
+    - Dentro do node, todos os arquivos são módulos.
+    - Nativos -> Já vem dentro do próprio node, só precisamos importar e usamos os métodos que eles disponibilizam para nós usarmos. *Ex:* HTTP
+    - npm -> node package manager
+
+- Para exportarmos algum módulo, temos as seguintes opções:
+  - Exportar na hora de criar o módulo.
+    ```
+    exports.myVar = 'Gabriel' 
+      o "My Var", é o nome que desejamos passar para o módulo.
+    ```
+  - Temos também a opção de passar depois de criar o módulo.
+      ```
+        module.exports = myVar
+          Ele declara a exportação de um módulo, onde o valor recebido, é o módulo que desejamos exportar.
+
+      ```
+    Também podemos fazer com object destructuring, quando queremos exportar mais de um módulo.
+    ```
+      function myFunc(name){
+        return name
+      }
+
+      const myVar = 'João'
+
+      module.exports = { myFunc, myVar }
+    ```
+  - Formas de importar um módulo:
+    - Criando uma variável que recebe um método do node, onde é passado o caminho do arquivo, e chamando o arquivo onde quisermos.
+      
+      ```
+        const myImport = require('./index')
+
+        console.log(myImport.funcaoTeste)
+      ```
+
+    - Podemos também, fazer destructuring na hora de importar, e esses valores serão armazenados dentro de uma variável com seu próprio nome, sem precisar de todo aquele myImport.algumaCoisa.
+
+      ```
+        const { funcaoTeste } = require('./index')
+
+        console.log(funcaoTeste)
+      ```
+  - E para importar os módulos nativos do node: require('nomeDoModulo'). Sem a barra pra acessar o caminho, apenas o nome do módulo.
