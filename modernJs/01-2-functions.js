@@ -1,10 +1,8 @@
-const algumNumero = 10
-const soma = () => (
-  algumNumero >= 10 
-  ? 'Maior igual a 10' 
-  : 'Menor igual a 10'
-  )
+function soma(primeiroParametro, ...argumentos){
+  console.log({primeiroParametro})
+  console.log({argumentos})
+}
 
-console.log(soma())
+soma(1, 2, 3, 4, 5, 6, 7, 'Gabriel')
 
-//We can envolve the arrow function with parenthesis when we wanna get our code organized, 'cause, we can break lines.
+//Function keyword has its own arguments, same as this keyword. Arrow function gets its "father" arguments, same as this keyword. 
