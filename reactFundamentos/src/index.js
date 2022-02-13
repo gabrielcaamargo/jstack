@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import App from './App'
+
 ReactDOM.render(
-  <span>
-    <h1 id="title">Hello World!</h1>
-  </span>,
+  <App />,
   document.getElementById('root')
 )
