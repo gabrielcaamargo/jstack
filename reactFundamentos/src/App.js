@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 
+import styles from './App.css'
+
 import Header from "./Header"
 import Post from "./Post"
 
@@ -37,7 +39,7 @@ function App(){
   return (
     <ThemeProvider> 
       <Header>
-        <h2>Posts da semana
+        <h2 className={styles.title}>Posts da semana
         &nbsp;
         <button onClick={handleRefresh}>Atualizar</button>
         </h2>
