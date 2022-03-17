@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import Button from '../Button';
 
+import {ThemeContext} from '../../context/ThemeContext';
+
 export default function PostHeader(props){
   return(
     <>
@@ -12,7 +14,8 @@ export default function PostHeader(props){
       </strong>    
 
       <Button 
-        onClick={()=> props.onRemove(props.post.id)}>
+        onClick={()=> props.onRemove(props.post.id)}
+        >
          Remover
       </Button>
     </>

@@ -30,23 +30,20 @@ function App(){
       ])
   }
 
-  function handleRemovePost(postId){
-    setPosts(prevState => (
-        prevState.map(
-          post => (
-            post.id === postId
-             ? {...post, removed: true}
-             : post
-          )
-        )
-    ))
-  }
+ function handleRemovePost(postId) {
+   setPosts((prevState) => prevState.map(
+     post => (
+       post.id === postId
+        ? {...post, removed: true }
+        : post 
+     )
+   ))
+ }
 
   return (
     <ThemeProvider> 
       <Header>
         <Title as="h2">Posts da semana
-          &nbsp;
           <button onClick={handleRefresh}>Atualizar</button>
         </Title>
       </Header>

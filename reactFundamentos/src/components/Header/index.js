@@ -6,7 +6,6 @@ import Title from '../Title'
 
 import {ThemeContext} from '../../context/ThemeContext';
 
-
 export default function Header(props) {
   const { onToggleTheme } = useContext(ThemeContext)
   return(
