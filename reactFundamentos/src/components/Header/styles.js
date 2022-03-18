@@ -12,8 +12,8 @@ export const Container = styled.header`
   button {
     font-size: 16px;
     cursor: pointer;
-    cursor: pointer;
     background: transparent;
     border: none;
   }
 `;
+
