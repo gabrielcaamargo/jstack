@@ -25,7 +25,7 @@ function App() {
   return (
     <ThemeProvider theme={currentTheme}>
       <GlobalStyle />
-      <button onClick={handleToggleTheme}>toggle</button>
+      <button onClick={handleToggleTheme}>Toggle</button>
       {theme === 'dark' && (
         <Layout 
           onToggleTheme={handleToggleTheme}
