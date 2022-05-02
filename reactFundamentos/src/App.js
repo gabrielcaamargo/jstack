@@ -9,7 +9,7 @@ import themes from './styles/themes'
 
 function App() {
 
-  const [theme, setTheme] = useState('dark')
+  const [theme, setTheme] = useState('light')
 
   const firstRender = useRef(true)
   console.debug(firstRender.current)
@@ -39,14 +39,18 @@ function App() {
   return (
     <ThemeProvider theme={currentTheme}>
       <GlobalStyle />
-      <button onClick={handleToggleTheme}>Toggle</button>
       {theme === 'dark' && (
         <Layout 
           onToggleTheme={handleToggleTheme}
           selectedTheme={theme}
         /> 
       )}
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      {theme === 'light' && (
+        <Layout 
+          onToggleTheme={handleToggleTheme}
+          selectedTheme={theme}
+        /> 
+      )}
     </ThemeProvider>
   );
 };
