@@ -2,35 +2,25 @@ import React from 'react';
 
 import { Container } from './styles';
 
-export default class Header extends React.Component {
-  render() {
-    const {selectedTheme, onToggleTheme} = this.props
+import { useHistory } from 'react-router-dom'
 
-    return(
-      <Container>
-        <h1>JStack's Blog</h1>
-        <button 
-          type="button" 
-          onClick={onToggleTheme}
+export default function Header({onToggleTheme, selectedTheme}) {
+  const history = useHistory()
+
+  function handleNavigate(){
+    history.push('./posts')
+  }
+
+  return (
+    <Container>
+      <h1>JStack's Blog</h1>
+      <button 
+        type="button" 
+        onClick={onToggleTheme}
         >
           {selectedTheme === 'dark' ? '🌞' : '🌚'}
-        </button>
-      </Container>
-    )
-  }
+      </button>
+      <button onClick={handleNavigate} style={{color: "#FFF"}}>Navegar</button>
+    </Container>
+  );
 }
-
-
-// export default function Header({onToggleTheme, selectedTheme}) {
-//   return (
-//     <Container>
-//       <h1>JStack's Blog</h1>
-//       <button 
-//         type="button" 
-//         onClick={onToggleTheme}
-//         >
-//           {selectedTheme === 'dark' ? '🌞' : '🌚'}
-//       </button>
-//     </Container>
-//   );
-// }
