@@ -6,9 +6,9 @@ import Posts from './pages/Posts'
 
 export default function Routes(){
   return(
-    <BrowserRouter>
-      <Route path="/" component={Home}/>
+    <>
+      <Route exact path="/" component={Home}/>
       <Route path="/posts" component={Posts}/>
-    </BrowserRouter>
+    </>
   )
 }
