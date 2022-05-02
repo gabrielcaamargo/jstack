@@ -29,10 +29,10 @@ export default function Layout({ onToggleTheme, selectedTheme }) {
 
     <Routes />
       
-      <Footer 
+      {/* <Footer 
         onToggleTheme={onToggleTheme}
         selectedTheme={selectedTheme}
-      />
+      /> */}
     </BrowserRouter>
   );
 }
