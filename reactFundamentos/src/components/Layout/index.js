@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 
 import Header from '../Header';
-import PostsList from '../PostsList';
 import Footer from '../Footer';
+
+import Routes from '../../routes';
 
 export default function Layout({ onToggleTheme, selectedTheme }) {
     
@@ -23,7 +24,8 @@ export default function Layout({ onToggleTheme, selectedTheme }) {
         selectedTheme={selectedTheme}
       />
         
-      <PostsList />
+    <Routes />
+      
       <Footer 
         onToggleTheme={onToggleTheme}
         selectedTheme={selectedTheme}

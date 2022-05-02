@@ -9,7 +9,7 @@ import themes from './styles/themes'
 
 function App() {
 
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState('dark')
 
   const firstRender = useRef(true)
   console.debug(firstRender.current)
