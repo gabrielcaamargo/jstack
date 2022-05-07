@@ -11,6 +11,7 @@ import Post from './pages/Post';
 export default function Routes(){
   const location = useLocation()
   const transitions = useTransition(location, {
+    
     from: { opacity: 0, transform: 'translateY(50px)', position: 'absolute', },
     enter: { opacity: 1, transform: 'translateY(0px)', position: 'absolute', },
     leave: { opacity: 0, transform: 'translateY(50px)', position: 'absolute',},
