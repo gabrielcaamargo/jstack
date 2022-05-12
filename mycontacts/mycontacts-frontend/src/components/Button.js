@@ -1,25 +1,25 @@
 import styled from 'styled-components';
 
 export default styled.button`
-  width: 100%;
   height: 52px;
   border: none;
+  padding: 0 16px;
   background-color: ${({ theme }) => theme.colors.primary.main};
   font-size: 16px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.04);
   font-weight: bold;
-  color: #FFF;
+  color: #fff;
   border-radius: 4px;
   transition: background 0.2s ease-in;
-  &:hover{
+  &:hover {
     background-color: ${({ theme }) => theme.colors.primary.light};
   }
 
-  &:active{
+  &:active {
     background-color: ${({ theme }) => theme.colors.primary.dark};
   }
-  &[disabled]{
-    background-color: #CCC;
+  &[disabled] {
+    background-color: #ccc;
     cursor: default;
   }
 `;
